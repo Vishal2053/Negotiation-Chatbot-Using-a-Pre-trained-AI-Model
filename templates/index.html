@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Negotiation Chatbot</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+<body>
+    <h1>Negotiation Chatbot</h1>
+    <form id="negotiationForm">
+        <label for="price">Enter your proposed price:</label><br>
+        <input type="number" id="price" name="price" required><br><br>
+
+        <label for="message">Enter your message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2 style="text-align: center;">Results</h2>
+    <p style="text-align: center;"><strong>Sentiment Analysis:</strong> <span id="sentiment"></span></p>
+    <p style="text-align: center;"><strong>Negotiation Response:</strong> <span id="negotiationResponse"></span></p>
+    <p style="text-align: center;"><strong>Bot Response:</strong> <span id="botResponse"></span></p>
+
+    <script>
+        document.getElementById('negotiationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let formData = new FormData(this);
+            
+            fetch('/negotiate', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('sentiment').innerText = data.sentiment;
+                document.getElementById('negotiationResponse').innerText = data.negotiation_response;
+                document.getElementById('botResponse').innerText = data.bot_response;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

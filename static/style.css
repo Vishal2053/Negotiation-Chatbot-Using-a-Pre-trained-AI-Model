@@ -1,0 +1,99 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Button styles */
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Result section styling */
+.result-section {
+    margin-top: 30px;
+}
+
+.result-section p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Flexbox for better alignment */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container .label {
+    width: 30%;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.flex-container .input {
+    width: 70%;
+}
