@@ -44,27 +44,44 @@ Create a virtual environment (optional but recommended):
 
 bash
 python -m venv venv
+
 source venv/bin/activate  # For Windows: venv\Scripts\activate
+
 Install the required dependencies:
 
 bash
 pip install -r requirements.txt
+
 Run the app:
 
 bash
+
 streamlit run app.py
+
 Usage
+
 Open your web browser and navigate to http://localhost:8501.
+
 Enter your proposed price and message into the input fields.
+
 Click Submit to see the bot's response based on sentiment analysis and negotiation logic.
+
 Project Structure
+
 negotiation-chatbot/
+
 │
+
 ├── app.py               # Main application file for Streamlit
+
 ├── requirements.txt      # List of dependencies
+
 ├── README.md             # Project documentation
+
 └── assets/               # Folder for images and other static assets
+
 Contributing
+
 Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to submit a pull request.
 
 
