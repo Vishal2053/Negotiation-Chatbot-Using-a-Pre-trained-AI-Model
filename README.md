@@ -36,7 +36,7 @@ The project incorporates **sentiment analysis** to understand the tone of the me
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/negotiation-chatbot.git
+   git clone [https://github.com/Vishal2053/Negotiation-Chatbot-Using-a-Pre-trained-AI-Model.git]
 
 
 cd negotiation-chatbot
